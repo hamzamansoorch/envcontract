@@ -1,0 +1,15 @@
+- id: envcontract-guard
+  name: envcontract guard (block committing secret values)
+  description: Blocks a commit if staged files contain real values for secret keys.
+  entry: envcontract guard
+  language: python
+  pass_filenames: true
+  files: '(^|/)\.env($|\.)'
+
+- id: envcontract-check
+  name: envcontract check (validate .env against schema)
+  description: Validates the local .env against .env.schema.
+  entry: envcontract check
+  language: python
+  pass_filenames: false
+  always_run: true
